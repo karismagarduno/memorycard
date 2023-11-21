@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
-const correctSound = new Audio('sounds/');
+const matchSound = new Audio('sounds/match.');
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
