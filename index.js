@@ -14,7 +14,9 @@ fetch("./data/cards.json")
     shuffleCards();
     generateCards();
   });
-
+function playMatchSound() {
+  matchSound.play();
+}
 function shuffleCards() {
   let currentIndex = cards.length,
     randomIndex,
@@ -65,6 +67,7 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+  playMatchSound();
 
   isMatch ? disableCards() : unflipCards();
 }
